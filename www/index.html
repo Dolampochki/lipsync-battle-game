@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lip Sync Battle</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,300,600,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/games-screens-style.css">		
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/lipsync_battle.js"></script>
+    
+</head>
+
+<body class="games-screen">
+
+<!-- Lip Sync Battle -->
+<div class="heart-bg"></div>
+<!-- Opening screen -->
+
+
+	<div class="game-screen opening-screen lipsync_battle">			
+		<audio class="opening-screen-sound">		  
+		  <source src="sounds/StarSlideIn_V2.mp3" type="audio/mpeg">
+		</audio>
+		<div class="game-screen-header">						
+		</div>
+		<div class="game-main">
+			<div class="game-large-icon"><img src="img/game-icons/game_icon_lipsync_battle.png"></div>	
+			<div class="screen-title">Lip Sync Battle</div>
+			<div class="screen-description">Pick the best Lip Sync</div>	
+			<div class="loader">Loading...</div>			
+		</div>
+	</div>				
+
+
+<!-- Choose screen -->
+
+
+	<div class="game-screen choose-screen lipsync_battle hide">		
+		 <div class="overlay hide"></div>
+		
+		<div class="game-screen-header">
+			<div class="game-top-icon"><img src="img/game-icons/top_icon_lipsync_battle.png"></div>					
+		</div>
+		<div class="game-main">
+			<div class="screen-title">Pick the Best</div>
+			<form>
+			<div class="choose-blocks">
+				
+				<div class="choose-block block-1" style="background-color: #9b1458;">	
+					<div class="choose-video-container">
+						<video class="choose-video choose-video-1" webkit-playsinline="webkit-playsinline" width="100%" height="auto">
+	              			<source src="http://media.chosen.fm/chosen-videos/84/0a/d790c9e6c0b5e02c87b375e782ac01bc/Lipsync_83da7c539e1ab4e7_59623c38d8737e9e_Video.mp4#t=0,50" type="video/mp4">
+	        			</video>
+        			</div>
+        			<div class="block-title">
+	        			<span>Jamie Soricelli</span>
+	        			<div class="block-votes hide">1254 votes</div>
+						<div class="block-votes-progress hide"><div class="block-votes-progress-white"></div></div>
+					</div>					
+					<div class="block-choose"><input type="radio" name="block-radio" class="block-radio" id="block-radio-1" /><label for="block-radio-1"></label></div>
+					
+				</div>
+				<div class="choose-block block-2" style="background-color: #2a82ba;">	
+					<div class="choose-video-container">
+						<video class="choose-video choose-video-2"  webkit-playsinline="webkit-playsinline" width="100%" height="auto">
+	              			<source src="http://media.chosen.fm/chosen-videos/5e/06/46031b3d04dc90994ca317a7c55c4289/Lipsync_f8f122d50eba11c3_af5607575b277bc6_Video.mp4#t=1.6,51.6" type="video/mp4">
+	        			</video>
+        			</div>
+        			<div class="block-title">
+	        			<span>Jeremi Floodman</span>
+	        			<div class="block-votes hide">867 votes</div>
+						<div class="block-votes-progress hide"><div class="block-votes-progress-white"></div></div>
+					</div>
+					<div class="block-choose"><input type="radio" name="block-radio" class="block-radio" id="block-radio-2" /><label for="block-radio-2"></label></div>
+				 	
+				</div>			
+						
+			</div>	
+			</form>				
+		</div>
+	</div>
+
+<!-- Result -->
+
+	<div class="game-screen result-screen lipsync_battle hide">
+		<audio class="result-screen-correct sound-play">		  
+		  <source src="sounds/Correct_Star_Chosen.mp3" type="audio/mpeg">
+		</audio>
+		<audio class="result-screen-wrong">		  
+		  <source src="sounds/Wrong_Star_Chosen.mp3" type="audio/mpeg">
+		</audio>
+		<div class="game-screen-header">						
+		</div>
+		<div class="game-main">
+			<div class="game-large-icon"><img src="img/game_icon_right_choice.png"></div>	
+			<div class="screen-title">Perfect Choice!<br /><small>You have chosen the match</small></div>
+			<div class="choose-blocks">
+				<div class="choose-block block-1" style="background-color: #2a82ba;">				
+					<div class="user-profile-pic" style="background-image: url('http://media.chosen.fm/chosen-fm-images/5e/06/46031b3d04dc90994ca317a7c55c4289/Lipsync_f8f122d50eba11c3_af5607575b277bc6_Image.png')"></div>
+					<div class="block-title">
+						<span>Jeremi Floodman</span>
+						<div class="block-votes">1254 votes</div>
+						<div class="block-votes-progress"><div class="block-votes-progress-white"></div></div>
+					</div>
+					<div class="block-choose"></div>				 								
+				</div>	
+			</div>		
+		</div>
+	</div>	
+
+<!-- xp -->
+
+	<div class="game-screen xp-screen lipsync_battle hide">
+		<video class="xp-video" webkit-playsinline="webkit-playsinline"  width="100%" height="100%">
+              <source src="sounds/end_game_animation_01.mp4" type="video/mp4">
+        </video>
+	</div>	
+	
+<!-- Share screen -->
+
+
+	<div class="game-screen share-screen lipsync_battle hide">		
+		<div class="game-screen-header">
+			<div class="game-top-icon"><img src="img/game-icons/top_icon_lipsync_battle.png"></div>					
+		</div>
+		<div class="game-main">				
+			<div class="choose-blocks">				
+				<div class="choose-block block-1" style="background-color: #9b1458;">
+					<div class="review-clip"></div>
+					<div class="user-profile-pic" style="background-image: url('http://media.chosen.fm/chosen-fm-images/84/0a/d790c9e6c0b5e02c87b375e782ac01bc/Lipsync_83da7c539e1ab4e7_59623c38d8737e9e_Image.png')"><div class="user-profile-pic-border" style="background-image: url('img/game-userpic-radius-ss-1@3x.png')"></div></div>
+					<div class="block-title"><span>Michaela Carter</span></div>
+					<div class="share-screen-buttons">
+						<div class="share-button">Share</div>
+						<div class="review-button">Review</div>
+					</div>
+				</div>
+				<div class="choose-block block-2" style="background-color: #2a82ba;">
+					<div class="review-clip"></div>
+					<div class="user-profile-pic" style="background-image: url('http://media.chosen.fm/chosen-fm-images/5e/06/46031b3d04dc90994ca317a7c55c4289/Lipsync_f8f122d50eba11c3_af5607575b277bc6_Image.png')"><div class="user-profile-pic-border" style="background-image: url('img/game-userpic-radius-ss-1@3x.png')"></div></div>
+					<div class="block-title"><span>Amii Christine</span></div>
+					<div class="share-screen-buttons">
+						<div class="share-button">Share</div>
+						<div class="review-button">Review</div>
+					</div>
+				</div>										
+			</div>	
+			
+			<button  class="game-result-button">Next Round</button>
+			
+									
+		</div>
+		
+	</div>
+
+<!-- Card screen -->
+	
+	<div class="game-screen card-screen lipsync_battle hide ">
+		
+		<div class="game-screen-header">
+			<div class="top-right-icon"><img src="img/standard_icon_forward.png"></div>
+		</div>
+		<div class="game-main">
+			<div class="game-card">
+				<div class="screen-label">Performance <strong>1</strong> from <strong>2</strong></div>
+				<div class="card-performance-timer"><img src="img/timer.gif"></div>
+				<div class="card-performance-video">
+					<video class="rewatch-video-1 rewatch-video" webkit-playsinline="webkit-playsinline"  width="100%" height="100%">
+                         <source src="http://media.chosen.fm/chosen-videos/84/0a/d790c9e6c0b5e02c87b375e782ac01bc/Lipsync_83da7c539e1ab4e7_59623c38d8737e9e_Video.mp4#t=5,20" type="video/mp4">
+        			</video>
+                    <video class="rewatch-video-2 hide"  webkit-playsinline="webkit-playsinline" width="100%" height="100%">
+                         <source src="http://media.chosen.fm/chosen-videos/5e/06/46031b3d04dc90994ca317a7c55c4289/Lipsync_f8f122d50eba11c3_af5607575b277bc6_Video.mp4#t=6.6,21.6" type="video/mp4">
+        			</video>                   
+				</div>
+				<div class="card-performance-details">
+					<div class="screen-title">Michaela Carter</div>					
+				</div>
+			</div>		
+			
+		</div>
+	</div>
+
+
+		
+</body>
+
+</html>
